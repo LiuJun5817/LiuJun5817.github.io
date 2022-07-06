@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>赣酒飘香商家管理后台</title>
+		<link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon"/>
+		<script type="text/javascript">
+							
+			function find_date(){
+//	            var dr = document.getElementById("dr");
+//	            var username_text = document.getElementById("dr_username").value;  
+//	            var password_text = document.getElementById("dr_password").value;
+	            window.alert("登录失败");
+	        }
+
+		</script>
+		<style type="text/css">
+			*{
+				/*background-color: #F2F2F0;*/
+				margin: 0;
+				padding: 0;
+			}
+			.page_login {
+			    margin-top: 210px;
+			    color: #565656;
+			    font: 9pt "microsoft yahei";
+			}
+			#login-form {
+			    height: 350px;
+			    background: url(img/login_form_bg.png) no-repeat center;
+			    box-shadow: 0 0 30px #ffa4a2;
+			}
+			.page_login .login_tab {
+			    margin: 0 auto;
+			    width: 700px;
+			}
+			.page_login .signup_container {
+			    margin-top: -28px;
+			    padding-bottom: 20px;
+			    width: 300px;
+			    height: 380px;
+			    border-radius: 2px;
+			    background: #f8f8f8;
+			    box-shadow: 1px 2px 4px rgb(0 0 0 / 60%);
+			    text-align: center;
+			    -webkit-user-select: none;
+			    -ms-user-select: none;
+			}
+			.page_login h1.signup_title {
+			    width: 100%;
+			    height: 75pt;
+			    border-top-right-radius: 2px;
+			    border-top-left-radius: 2px;
+			    background: #f7606b;
+			    color: #fff;
+			    text-align: center;
+			    letter-spacing: 3px;
+			    font: 20px/1.4 "microsoft yahei";
+			    line-height: 30px;
+			}
+			.page_login .signup_forms {
+			    margin: 10px auto 0;
+			    padding: 0;
+			    width: 260px;
+			    text-align: left;
+			}
+			.clear {
+			    display: block;
+			    overflow: hidden;
+			    clear: both;
+			    height: 21px;
+			}
+			.page_login .signup_forms .form_name {
+			    font: 14px/36px "microsoft yahei";
+			    width: 50px;
+			    /*height: 36px;*/
+			    float: left;
+			    position: relative;
+			}
+			.page_login .signup_forms .form_row {
+			    position: relative;
+			    border: 1px solid #ccc;
+			    border: 1px solid rgba(0,0,0,.12);
+			    border-radius: 5px;
+			    float: left;
+			}
+			.page_login .signup_forms .form_row .input-name {
+			    background: url(img/login_name.png) 176px 8px no-repeat #f0eef1;
+			    background-size: 20px 20px;
+			    width: 200px;
+			}
+			.page_login .signup_forms input {
+			    display: block;
+			    margin: 0;
+			    padding: 8px 0;
+			    outline: 0;
+			    border: 0;
+			    border-radius: 5px;
+			    color: #333;
+			    text-indent: 10px;
+			    font: 14px/1.4 "microsoft yahei";
+			    line-height: 20px;
+			}
+			.page_login .signup_forms .form_row .input-password {
+			    background: url(img/login_psw.png) 176px 8px no-repeat #f0eef1;
+			    background-size: 20px 20px;
+			    width: 200px;
+			}
+			.input-verification {
+			    width: 100px;
+			}
+			.page_login .login-btn-set {
+			    overflow: hidden;
+			    margin: 18px auto;
+			    width: 260px;
+			    height: auto;
+			    cursor: pointer;
+			}
+			.page_login input[type=submit] {
+			    padding: 0;
+			    border: 0;
+			    border-radius: 2px;
+			}
+			.page_login .login-btn {
+			    display: block;
+			    width: 260px;
+			    height: 41px;
+			    background: #f7606b;
+			    color: #fff;
+			    font: 1pc/1 "microsoft yahei";
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page_login">
+			<div id="login-form">
+				<div class="login_tab">
+					<img src="img/login_tab_pic.png" height="300px" style="margin-top: 25px;"/>
+					<div class="signup_container" style="display: inline-block; float: right;" >
+						<from id="login-data" action method="post">
+							<h1 class="signup_title">
+								<img src="img/inlinLogo.png" width="120px" height="50px"/>
+								<br>
+								账户登录
+							</h1>
+							<div id="signup_forms" class="signup_forms clearfix">
+								<div class="clear"></div>
+								<div class="form_name">用户名:</div>
+								<div class="form_row">
+									<label for="signup_email"></label>
+									<input class="input-name" placeholder="用户名" required="required" name="username" id="LoginForm_username" type="text" id="dr_username" />
+								</div>
+								<div class="clear"></div>
+								<div class="form_name">密码:</div>
+								<div class="form_row">
+									<label for="signup_password"></label>
+									<input class="input-password" placeholder="密码" required="required" name="password" id="LoginForm_password" type="text" id="dr_password" />
+								</div>
+								<div class="clear"></div>
+								<div class="form_name">验证码:</div>
+								<div class="form_row">
+									<label for="signup_verification"></label>
+									<input class="input-verification" placeholder="验证码" required="required" name="verification" id="LoginForm_verification" type="text" />
+								</div>
+								<img alt="验证码，看不清？请点击刷新" title="验证码，看不清？请点击刷新" style="cursor: pointer; margin: 0; padding: 0; margin-left: 8px; vertical-align: middle;" id="code" src="img/captcha.png"/>
+								<div class="remeber_pwd" style="color: #999; text-align: right; font-size: 14px; margin-top: 10px; margin-right: 0px;">记住密码
+									<input type="checkbox" style="height: 14px; width: 14px; vertical-align: middle; display: block; float: right; margin-top: 4px;margin-left: 5px;"/>
+								</div>
+							</div>
+						</from>
+						<div class="login-btn-set">
+							<div>
+								<input type="submit" name="login" class="login-btn j-login" value="登录" onclick="find_date()" id="dr" />
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
